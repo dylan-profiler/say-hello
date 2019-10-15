@@ -5,21 +5,19 @@ from contextlib import closing
 
 import requests
 from selenium.common.exceptions import NoSuchElementException
+from selenium import webdriver
+import tempfile
+import time
 from tqdm import tqdm
 
 
 def download_easy(url, destination):
-    # https://chromedriver.storage.googleapis.com/index.html?path=78.0.3904.11/
-    from selenium import webdriver
-    import tempfile
-    import time
-
     print(f'Downloading "{destination}" from {url}')
     with tempfile.TemporaryDirectory() as tmpdirname:
         options = webdriver.ChromeOptions()
         options.add_argument('--ignore-certificate-errors')
         options.add_argument("--test-type")
-        # options.add_argument("--headless")
+        options.add_argument("--headless")
         options.add_experimental_option('prefs', {'download.default_directory': tmpdirname})
         driver = webdriver.Chrome(options=options)
         driver.get(url)
