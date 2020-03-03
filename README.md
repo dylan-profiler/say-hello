@@ -38,6 +38,6 @@ Installation for Python 3 requires two steps:
 
 ## Example usage
 
-The [`type_analysis`](/blob/master/type_analysis) directory contains jupyter notebooks with analyses of the data types of each dataset. These are also an excellent reference implementation for loading the sets.
+The [`type_analysis`](/type_analysis) directory contains jupyter notebooks with analyses of the data types of each dataset. These are also an excellent reference implementation for loading the sets.
 
-The [`profile.py`](/blob/master/profile.py) script generates exploratory data analysis reports for the datasets.
+The [`profile.py`](/profile.py) script generates exploratory data analysis reports for the datasets.
